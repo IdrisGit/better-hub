@@ -472,9 +472,9 @@ export function UserProfileContent({
 	}, [user, repos, orgs, contributions, totalStars, totalForks, orgTopRepos]);
 
 	return (
-		<div className="flex flex-col lg:flex-row gap-8 flex-1 min-h-0">
+		<div className="flex flex-col lg:flex-row gap-8 flex-1 min-h-0 pb-2">
 			{/* ── Left sidebar ── */}
-			<aside className="shrink-0 lg:w-[280px] lg:sticky lg:top-4 lg:self-start pl-4">
+			<aside className="shrink-0 lg:w-[280px] lg:sticky lg:top-4 lg:self-start pl-4 pb-4 lg:pb-0">
 				{/* Avatar + identity */}
 				<div className="flex flex-col items-center lg:items-start">
 					<div className="relative group">
@@ -702,7 +702,7 @@ export function UserProfileContent({
 			</aside>
 
 			{/* ── Main content ── */}
-			<main className="flex-1 min-w-0 flex flex-col min-h-0 overflow-y-auto pr-1">
+			<main className="flex-1 min-w-0 flex flex-col min-h-0 pr-1">
 				{/* Overview stats header */}
 				<div className="shrink-0 mb-4">
 					<div className="flex items-center justify-between mb-3">
@@ -1147,7 +1147,7 @@ export function UserProfileContent({
 						</div>
 
 						{/* Repo list */}
-						<div className="flex-1 min-h-96 sm:min-h-0 overflow-y-auto border border-border rounded-md divide-y divide-border">
+						<div className="flex-1 min-h-0 overflow-y-auto border border-border rounded-md divide-y divide-border">
 							{filtered.map((repo) => (
 								<Link
 									key={repo.id}
