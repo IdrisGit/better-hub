@@ -474,11 +474,11 @@ export function UserProfileContent({
 	return (
 		<div className="flex flex-col lg:flex-row gap-8 flex-1 min-h-0 pb-2">
 			{/* ── Left sidebar ── */}
-			<aside className="shrink-0 lg:w-[280px] lg:sticky lg:top-4 lg:self-start pl-4 pb-4 lg:pb-0">
+			<aside className="shrink-0 lg:w-70 lg:sticky lg:top-4 lg:self-start pl-4 pb-4 lg:pb-0">
 				{/* Avatar + identity */}
 				<div className="flex flex-col items-center lg:items-start">
 					<div className="relative group">
-						<div className="absolute -inset-1 rounded-full bg-gradient-to-br from-[var(--contrib-2)]/20 via-transparent to-[var(--contrib-4)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+						<div className="absolute -inset-1 rounded-full bg-linear-to-br from-(--contrib-2)/20 via-transparent to-(--contrib-4)/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
 						<Image
 							src={user.avatar_url}
 							alt={user.login}
@@ -617,7 +617,7 @@ export function UserProfileContent({
 								<Link
 									key={org.login}
 									href={`/${org.login}`}
-									className="group flex items-center gap-2.5 py-1 px-1.5 -mx-1.5 rounded-md hover:bg-muted/50 dark:hover:bg-white/[0.03] transition-colors"
+									className="group flex items-center gap-2.5 py-1 px-1.5 -mx-1.5 rounded-md hover:bg-muted/50 dark:hover:bg-white/3 transition-colors"
 								>
 									<Image
 										src={org.avatar_url}
@@ -713,7 +713,7 @@ export function UserProfileContent({
 							(activeYear === currentYear
 								? yearStats.currentStreak > 0 && (
 										<div className="flex items-center gap-1.5 text-[11px] font-mono text-muted-foreground">
-											<span className="w-2 h-2 rounded-full bg-[var(--contrib-3)]" />
+											<span className="w-2 h-2 rounded-full bg-(--contrib-3)" />
 											{
 												yearStats.currentStreak
 											}{" "}
@@ -722,7 +722,7 @@ export function UserProfileContent({
 									)
 								: yearStats.bestStreak > 0 && (
 										<div className="flex items-center gap-1.5 text-[11px] font-mono text-muted-foreground">
-											<span className="w-2 h-2 rounded-full bg-[var(--contrib-2)]" />
+											<span className="w-2 h-2 rounded-full bg-(--contrib-2)" />
 											{
 												yearStats.bestStreak
 											}{" "}
